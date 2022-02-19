@@ -4,7 +4,7 @@
 // write function that takes an app function as an input, 
 // checks against expected output, and returns a pass/fail
 // message, and the expected and actual return
-function takeMyFunction(appFunction, input, expectedReturn, expectedFail = false) {
+function takeMyFunc(appFunction, input, expectedReturn, expectedFail = false) {
     input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
     funcReturn instanceof Array && (funcReturn = `${funcReturn}`) // should split variable off so that actual return value is still available
     expectedReturn instanceof Array && (expectedReturn = `${expectedReturn}`)
@@ -32,34 +32,34 @@ function runTests() {
     testCount = 0
 
     // 1
-    takeMyFunction(inputToOutput, 'hi dave', 'hi dave')
+    takeMyFunc(inputToOutput, hal(), 'hi dave')
 
     // 2 - expect failure
-    takeMyFunction(inputToOutput, 'hi ash', 'hi dave', true)
+    takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
 
-    // 3 - expect failure
-    takeMyFunction(returnTypeString, null, "string", true)
+    // 3 - expect failure - issue found HERE
+    takeMyFunc(returnTypeString, null, "integer", true)
 
     // 4
-    takeMyFunction(returnTypeString, null, "string")
+    takeMyFunc(returnTypeString, null, "string")
     
     // 5
-    takeMyFunction(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
+    takeMyFunc(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
 
     // 6
-    takeMyFunction(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
+    takeMyFunc(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
 
-    // 6 - expect failure
-    takeMyFunction(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18], true)
+    // 7 - expect failure
+    takeMyFunc(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18], true)
 
-    // 6 
-    takeMyFunction(innerFrameGenerator, ['grenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
+    // 8 
+    takeMyFunc(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
 
-    // 7 - expect failure - unknown how object will log
-    takeMyFunction(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
+    // 9 - expect failure - unknown how object will log
+    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
 
-    // 7 - duplicate as above without expected fail
-    takeMyFunction(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', "[object Object]"])
+    // 10 - duplicate as above without expected fail
+    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
 
 }
 
@@ -73,6 +73,10 @@ runTests()
 
 function inputToOutput(input) {
     return input
+}
+
+function hal() {
+    return 'hi hal'
 }
 
 function returnTypeString() {
@@ -109,3 +113,6 @@ function rectGen(length, width, input) {
     let rect = new Rectangle(length, width, input)
     return rect
 }
+
+
+// ISSUE - expect failure conditional is not conditional, it's absolute. If it expects failure and it's correct, it still fails.
