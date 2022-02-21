@@ -53,22 +53,22 @@ class TDDLogger {
     takeMyFunc = (appFunction, input, expectedReturn, expectedFail = false) => {
 
         function testLogger(message, expectedReturn, actualReturn, expectedFail) {
-            setRed = () => {
+            let resultColor
+            let failValue
+            function setRed() {
                 message = logFail()
                 resultColor = 'red'
             }
-            setGreen = () => {
+            function setGreen() {
                 message = logPass()
                 resultColor = 'green'
             }
             message ? setGreen() : setRed()
-
+            
             function Result(value, type) {
                 this.value = value;
                 this.type = type;
             }
-            // let exp = new Result(expectedReturn, typeof (expectedReturn))
-            // let act = new Result(actualReturn, typeof (actualReturn))
             let resultTable = {}
             resultTable.expected = new Result(expectedReturn, typeof (expectedReturn))
             resultTable.actual = new Result(actualReturn, typeof (actualReturn))
@@ -81,6 +81,8 @@ class TDDLogger {
         }
         testCount++
 
+        let funcReturn
+        let message
         input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
         let rawReturn = funcReturn
         funcReturn instanceof Array && (funcReturn = `${funcReturn}`) // should split variable off so that actual return value is still available
@@ -111,31 +113,31 @@ function runTests() {
     TDD.takeMyFunc(inputToOutput, hal(), 'hi hal')
 
     // 2 - expect failure
-    takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
+    TDD.takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
 
     // 3 - expect failure 
-    takeMyFunc(returnTypeString, null, "number", true)
+    TDD.takeMyFunc(returnTypeString, null, "number", true)
 
     // 4
-    takeMyFunc(returnTypeString, null, "string")
+    TDD.takeMyFunc(returnTypeString, null, "string")
 
     // 5
-    takeMyFunc(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
+    TDD.takeMyFunc(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
 
     // 6
-    takeMyFunc(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
+    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
 
     // 7 - expect failure
-    takeMyFunc(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 14])
+    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 14])
 
     // 8 
-    takeMyFunc(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
+    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
 
     // 9 - expect failure - unknown how object will log
-    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
+    TDD.takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
 
     // 10 - duplicate as above without expected fail
-    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
+    TDD.takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
 
 
     console.log('\n\033[33mTest Suite Finished\033[39m\n\n')
