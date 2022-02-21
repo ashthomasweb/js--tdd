@@ -2,15 +2,15 @@
 
 let importedObj = require('./node_modules/export-test1.js')
 
+importedObj.myFunc('hi')
 
+let newClass = new importedObj.Logger()
+newClass.print('hi ash')
 
 function simpleLog(input) {
     return input
 }
 
-importedObj.myFunc('hi')
+newClass.print(simpleLog('hi ashley'))
 
-let newClass = new importedObj.Logger()
-
-newClass.print('hi ash')
-// myLogger(simpleLog('hi ash'))
+// END of document
