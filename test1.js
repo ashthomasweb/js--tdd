@@ -6,24 +6,36 @@
 // message, and the expected and actual return
 function takeMyFunc(appFunction, input, expectedReturn, expectedFail = false) {
     input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
+    let rawReturn = funcReturn
     funcReturn instanceof Array && (funcReturn = `${funcReturn}`) // should split variable off so that actual return value is still available
     expectedReturn instanceof Array && (expectedReturn = `${expectedReturn}`)
-    funcReturn === expectedReturn & !expectedFail ? (message = "PASS") : (message = "**FAIL**")
+    funcReturn === expectedReturn & expectedFail === false ? (message = "PASS") : (message = "**FAIL**")
     message === "**FAIL**" & expectedFail && (message = "PASS")
     testCount++
-    testLogger(message, expectedReturn, funcReturn)
+    testLogger(message, expectedReturn, rawReturn, expectedFail)
 }
 
-function testLogger(message, expectedReturn, funcReturn) {
+function testLogger(message, expectedReturn, actualReturn, expectedFail) {
+
+    function Result(value, type) {
+        this.value = value;
+        this.type = type;
+    }
+    let exp = new Result(expectedReturn, typeof(expectedReturn))
+    let act = new Result(actualReturn, typeof(actualReturn))
+    let resultTable = {}
+    resultTable.expected = exp
+    resultTable.actual = act 
+
+    expectedFail ? (failValue = ' Expected to Fail:') : (failValue = '')
+    
     console.log(`\n\nTest ${testCount}:`)
-    console.log(`Result: ${message}`)
-    if (message === '**FAIL**') {
-        console.log('Expect value: ' + expectedReturn)
-        console.log(`Expect Type: ${typeof(expectedReturn)}`)
-        console.log(`Actual value: ${funcReturn}`)
-        console.log(`Actual Type: ${typeof(funcReturn)}`)
+    console.log(`Results:${failValue} ${message}`)
+    if (message === '**FAIL**' || expectedFail ) {
+        console.table(resultTable)
     }
 }
+
 
 let testCount = 0
 
@@ -32,13 +44,13 @@ function runTests() {
     testCount = 0
 
     // 1
-    takeMyFunc(inputToOutput, hal(), 'hi dave')
+    takeMyFunc(inputToOutput, hal(), 'hi hal')
 
     // 2 - expect failure
     takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
 
     // 3 - expect failure - issue found HERE
-    takeMyFunc(returnTypeString, null, "integer", true)
+    takeMyFunc(returnTypeString, null, "string", true)
 
     // 4
     takeMyFunc(returnTypeString, null, "string")
@@ -64,6 +76,18 @@ function runTests() {
 }
 
 runTests()
+
+
+
+
+
+// console.log('\033[33m Hello World \033[39m');
+
+
+
+
+
+
 
 
 
