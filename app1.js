@@ -1,6 +1,6 @@
 // App1 file for Test Driven Development practice
 
-let importedObj = require('./node_modules/export-test1.js')
+let importedObj = require('./oop-logger.js')
 
 importedObj.myFunc('hi')
 

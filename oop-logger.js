@@ -1,10 +1,5 @@
 // Test file for Test Driven Development practice
 
-// write function that takes an app function as an input, 
-// checks against expected output, and returns a pass/fail
-// message, and the expected and actual return
-
-
 logColor = (color, input) => {
     let beginColor = '\033'
     let colorCode = ''
@@ -36,13 +31,11 @@ logFail = () => {
     return logColor('red', '**Fail**')
 }
 
-
 exports.Logger = class TDDLogger {
     constructor() {
         this.testCount = 0
     }
 
-    // var testCount = 0
     takeMyFunc = (appFunction, input, expectedReturn, expectedFail = false) => {
 
         function testLogger(message, expectedReturn, actualReturn, expectedFail) {
@@ -56,6 +49,7 @@ exports.Logger = class TDDLogger {
                 message = logPass()
                 resultColor = 'green'
             }
+
             message ? setGreen() : setRed()
             
             function Result(value, type) {
@@ -65,19 +59,23 @@ exports.Logger = class TDDLogger {
             let resultTable = {}
             resultTable.expected = new Result(expectedReturn, typeof (expectedReturn))
             resultTable.actual = new Result(actualReturn, typeof (actualReturn))
+
             expectedFail ? (failValue = logColor('yellow', ' Anticipating error:')) : (failValue = '')
+            
             console.log(logColor(resultColor, `\n\nTest ${testCount}:`))
             console.log(`Results:${failValue} ${message}`)
             if (message === logFail() || expectedFail) {
                 console.table(resultTable)
             }
         }
+
         testCount++
 
         let funcReturn
         let message
         input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
         let rawReturn = funcReturn
+        console.log(rawReturn instanceof Array)
         funcReturn instanceof Array && (funcReturn = `${funcReturn}`) // should split variable off so that actual return value is still available
         let rawExpect = expectedReturn
         expectedReturn instanceof Array && (expectedReturn = `${expectedReturn}`)
@@ -95,15 +93,4 @@ exports.Logger = class TDDLogger {
     run = (input) => {input()}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// END of potential module
+// END of module

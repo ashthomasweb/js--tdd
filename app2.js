@@ -1,15 +1,5 @@
 // Test file for OOP refactor of TDDLogger 
 
-// import code from another file
-const importedModule = require('./oop-logger.js')
-let TDD = new importedModule.Logger()
-
-// instantiate new class from imported class assignment export
-
-
-
-
-
 // Mock "Application" functions to test using imported module
 
 function inputToOutput(input) {
@@ -51,59 +41,21 @@ function rectGen(length, width, input) {
             this.type = input
         }
     }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
     let rect = new Rectangle(length, width, input)
     return rect
 }
 
-
-
-
-
-
-
-
-
-// In-file Test suite
-
-function runTests() {
-    console.log('\n\033[33mTest Suite Initialized\033[39m')
-    testCount = 0
-
-    // 1
-    TDD.takeMyFunc(inputToOutput, hal(), 'hi hal')
-
-    // 2 - expect failure
-    TDD.takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
-
-    // 3 - expect failure 
-    TDD.takeMyFunc(returnTypeString, null, "number", true)
-
-    // 4
-    TDD.takeMyFunc(returnTypeString, null, "string")
-
-    // 5
-    TDD.takeMyFunc(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
-
-    // 6
-    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
-
-    // 7 - expect failure
-    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 14])
-
-    // 8 
-    TDD.takeMyFunc(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
-
-    // 9 - expect failure - unknown how object will log
-    TDD.takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
-
-    // 10 - duplicate as above without expected fail
-    TDD.takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
-
-    console.log('\n\033[33mTest Suite Finished\033[39m\n\n')
+module.exports = {
+    inputToOutput,
+    hal,
+    returnTypeString,
+    innerFrameGenerator,
+    objectFrameGenerator,
+    rectGen,
 }
 
-TDD.run(runTests)
-
-
-
-
+// END of document
