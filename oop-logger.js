@@ -1,5 +1,9 @@
 // Test file for Test Driven Development practice
 
+const fs = require('fs')
+
+let toLog = ''
+
 logColor = (color, input) => {
     let beginColor = '\033'
     let colorCode = ''
@@ -67,6 +71,16 @@ exports.Logger = class TDDLogger {
             if (message === logFail() || expectedFail) {
                 console.table(resultTable)
             }
+            let content = Date() + 'Test ' + testCount + '\n' + JSON.stringify(resultTable) + '\n' + appFunction + '\n\n'
+            fs.writeFile('./newLog.txt', content, { flag: 'a+' }, err => {
+                if (err) {
+                    console.error(err)
+                    return
+                  }
+                  //file written successfully
+            })
+           
+
         }
 
         testCount++
