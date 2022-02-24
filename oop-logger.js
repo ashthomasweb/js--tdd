@@ -41,7 +41,6 @@ exports.Logger = class TDDLogger {
     }
 
     takeMyFunc = (appFunction, input, expectedReturn, expectedFail = false) => {
-
         function testLogger(message, expectedReturn, actualReturn, expectedFail) {
             let resultColor
             let failValue
@@ -77,10 +76,8 @@ exports.Logger = class TDDLogger {
                     console.error(err)
                     return
                   }
-                  //file written successfully
+                  // file written successfully
             })
-           
-
         }
 
         testCount++
