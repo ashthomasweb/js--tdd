@@ -114,3 +114,1676 @@ function rectGen(length, width, input) {
     return rect
 }
 
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Tue Feb 22 2022 00:55:50 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:21:26 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:24:48 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:29:29 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:31:15 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:31:23 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:33:46 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":1,"type":"number"}}
+function maxIterate(inputArray) {
+    return inputArray
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:34:01 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":1,"type":"number"}}
+function maxIterate(inputArray) {
+    return inputArray
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:35:02 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":10,"type":"number"}}
+function maxIterate(inputArray) {
+    return inputArray
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:37:03 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":"number","type":"string"}}
+function maxIterate(inputArray) {
+    return typeof(inputArray)
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:38:33 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":"object","type":"string"}}
+function maxIterate(inputArray = [3,2]) {
+    return typeof(inputArray)
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:38:53 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":null,"type":"object"}}
+function maxIterate(inputArray = [3,2]) {
+    return inputArray
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:39:16 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":[3,2],"type":"object"}}
+function maxIterate(inputArray = [3,2]) {
+    return inputArray
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 1
+{"expected":{"value":"hi hal","type":"string"},"actual":{"value":"hi hal","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 2
+{"expected":{"value":"hi dave","type":"string"},"actual":{"value":"hi ash","type":"string"}}
+function inputToOutput(input) {
+    return input
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 3
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 4
+{"expected":{"value":"string","type":"string"},"actual":{"value":"string","type":"string"}}
+function returnTypeString() {
+    let obj = 'This string'
+    return typeof (obj)
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 5
+{"expected":{"value":["Vertical Red Rectangle",18],"type":"object"},"actual":{"value":["Vertical Red Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 6
+{"expected":{"value":["Diagonal Greenish Rectangle",18],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",18],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 7
+{"expected":{"value":["Diagonal Greenish Rectangle",14],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",14],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 8
+{"expected":{"value":["Diagonal Greenish Rectangle",50],"type":"object"},"actual":{"value":["Diagonal Greenish Rectangle",50],"type":"object"}}
+function innerFrameGenerator(color, length, width, orientation) {
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let position = orientation[0].toUpperCase() + orientation.substring(1)
+    let description = `${position} ${colorValue} Rectangle`
+    let perimeter = length * 2 + width * 2
+    let output = [description, perimeter]
+    return output
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 9
+{"expected":{"value":["Rectangular Blue shape that is 44 units around.",null],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 10
+{"expected":{"value":["Rectangular Blue shape that is 45 units around.","[object Object]"],"type":"object"},"actual":{"value":["Rectangular Blue shape that is 44 units around.",{"length":10,"width":12,"type":"rectangular"}],"type":"object"}}
+function objectFrameGenerator(color, length, width, type) {
+    let shape = rectGen(length, width, type)
+    let colorValue = color[0].toUpperCase() + color.substring(1)
+    let shapeType = shape.type[0].toUpperCase() + shape.type.substring(1)
+    let perimeter = length * 2 + width * 2
+    let description = `${shapeType} ${colorValue} shape that is ${perimeter} units around.`
+    return [description, shape]
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 11
+{"expected":{"value":20,"type":"number"},"actual":{"value":20,"type":"number"}}
+(x, y) => {
+        return (x * 4) + (y * 4)
+    }
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 12
+{"expected":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"},"actual":{"value":{"length":2,"width":4,"type":"rectangle"},"type":"object"}}
+function rectGen(length, width, input) {
+    class Rectangle {
+        constructor(length, width, input) {
+            this.length = length
+            this.width = width
+            this.type = input
+        }
+    }
+
+    doublePeri = (x, y) => {
+        return (x * 4) + (y * 4)
+    }
+    let rect = new Rectangle(length, width, input)
+    return rect
+}
+
+Thu Feb 24 2022 23:40:01 GMT-0500 (Eastern Standard Time)Test 13
+{"expected":{"value":[1,2,3,4,2],"type":"object"},"actual":{"value":3,"type":"number"}}
+function maxIterate(inputArray = [3,2]) {
+
+    return Math.max(...inputArray)
+}
+

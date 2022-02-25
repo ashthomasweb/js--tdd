@@ -1,22 +1,19 @@
 let importObj = require('./oop-logger.js')
 
-
-
 const {
     inputToOutput,
     hal,
     returnTypeString,
     innerFrameGenerator,
     objectFrameGenerator,
-    rectGen
+    rectGen,
+    maxIterate
 } = require('./app2.js')
 
 const TDD = new importObj.Logger()
 
-
 runTests = () => {
     testCount = 0
-    console.log('\n\033[33mTest Suite Initialized\033[39m')
 
     // 1
     TDD.takeMyFunc(inputToOutput, hal(), 'hi hal')
@@ -62,7 +59,12 @@ runTests = () => {
     // let rect = new Rectangle(2, 4, 'rectangle')
     TDD.takeMyFunc(rectGen, [2, 4, 'rectangle'], new Rectangle(2, 4, 'rectangle'))
 
-    console.log('\n\033[33mTest Suite Finished\033[39m\n\n')
+    // 13 - unsure of type handling here...
+    let array = [3, 2, 45, 4, 56]
+    TDD.takeMyFunc(maxIterate, array, [1,2,3,4,2], true)
+
 }
 
 TDD.run(runTests)
+
+// END of document 

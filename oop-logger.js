@@ -37,10 +37,11 @@ logFail = () => {
 
 exports.Logger = class TDDLogger {
     constructor() {
-        this.testCount = 0
+        // this.testCount = 0
     }
 
     takeMyFunc = (appFunction, input, expectedReturn, expectedFail = false) => {
+        
         function testLogger(message, expectedReturn, actualReturn, expectedFail) {
             let resultColor
             let failValue
@@ -101,7 +102,17 @@ exports.Logger = class TDDLogger {
         testLogger(message, rawExpect, rawReturn, expectedFail)
     }
 
-    run = (input) => {input()}
+    run = (input) => {
+
+    console.log(`\n${ansi}[33mTest Suite Initialized${ansi}[39m`)
+        
+        input()
+        console.log(`\n${ansi}[33mTest Suite Finished${ansi}[39m\n\n`)
+    
+    }
+
 }
+
+let ansi = '\033'
 
 // END of module

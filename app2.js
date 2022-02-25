@@ -49,6 +49,11 @@ function rectGen(length, width, input) {
     return rect
 }
 
+function maxIterate(inputArray = [3,2]) {
+
+    return Math.max(...inputArray)
+}
+
 module.exports = {
     inputToOutput,
     hal,
@@ -56,6 +61,7 @@ module.exports = {
     innerFrameGenerator,
     objectFrameGenerator,
     rectGen,
+    maxIterate
 }
 
 // END of document
