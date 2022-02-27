@@ -7,12 +7,16 @@ const {
     innerFrameGenerator,
     objectFrameGenerator,
     rectGen,
-    maxIterate
+    maxIterate,
+    maxIterateApply
 } = require('./app2.js')
 
 const TDD = new importObj.Logger()
 
 runTests = () => {
+    // // input syntax
+    // TDD.takeMyFunc(runThisFunction, [input], expectedReturn, expectedToFail)
+    
     testCount = 0
 
     // 1
@@ -61,7 +65,16 @@ runTests = () => {
 
     // 13 - unsure of type handling here...
     let array = [3, 2, 45, 4, 56]
-    TDD.takeMyFunc(maxIterate, array, [1,2,3,4,2], true)
+    TDD.takeMyFunc(maxIterateApply, [array], [1,2,3,4,2], true)
+
+    // 14 
+    TDD.takeMyFunc(maxIterateApply, undefined, 3)
+
+    // 15 - original solution, now tested with input as array
+    TDD.takeMyFunc(maxIterate, undefined, 2, true)
+
+    // // 16 - potential refactor model
+    // TDD.takeMyFunc(() => maxIterate([1,2,3,4,5,8]), expectedReturn, expectedToFail)
 
 }
 

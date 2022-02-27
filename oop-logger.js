@@ -83,7 +83,7 @@ exports.Logger = class TDDLogger {
 
         testCount++
 
-        let funcReturn
+        let funcReturn 
         let message
         input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
         let rawReturn = funcReturn

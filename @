@@ -1,0 +1,17 @@
+Creates tests to display issue
+
+Type handling fails when passing array to function. Default value as
+array works fine. When passed, spread operator fails @@iterator.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   app2.js
+#	modified:   app2.tests.js
+#	modified:   newLog.txt
+#	modified:   oop-logger.js
+#

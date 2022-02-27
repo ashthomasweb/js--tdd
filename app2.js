@@ -12,7 +12,7 @@ function hal() {
 
 function returnTypeString() {
     let obj = 'This string'
-    return typeof (obj)
+    return typeof(obj)
 }
 
 function innerFrameGenerator(color, length, width, orientation) {
@@ -49,10 +49,14 @@ function rectGen(length, width, input) {
     return rect
 }
 
-function maxIterate(inputArray = [3,2]) {
+function maxIterateApply(inputArray = [3,2]) {
+    return Math.max.apply(Math, [...inputArray])
+}
 
+function maxIterate(inputArray = [3,2]) {
     return Math.max(...inputArray)
 }
+
 
 module.exports = {
     inputToOutput,
@@ -61,7 +65,8 @@ module.exports = {
     innerFrameGenerator,
     objectFrameGenerator,
     rectGen,
-    maxIterate
+    maxIterate,
+    maxIterateApply
 }
 
 // END of document
