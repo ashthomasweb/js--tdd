@@ -1,4 +1,4 @@
-// Test file for OOP refactor of TDDLogger 
+// Test file for OOP refactor of uLogLogger 
 
 // Mock "Application" functions to test using imported module
 

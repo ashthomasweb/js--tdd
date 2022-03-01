@@ -41,7 +41,7 @@ function logColor(color, input) {
 // write function that takes an app function as an input, 
 // checks against expected output, and returns a pass/fail
 // message, and the expected and actual return
-function takeMyFunc(appFunction, input, expectedReturn, expectedFail = false) {
+function test(appFunction, input, expectedReturn, expectedFail = false) {
     input instanceof Array ? (funcReturn = appFunction(...input)) : (funcReturn = appFunction(input))
     let rawReturn = funcReturn
     funcReturn instanceof Array && (funcReturn = `${funcReturn}`) // should split variable off so that actual return value is still available
@@ -94,34 +94,34 @@ function runTests() {
     testCount = 0
 
     // 1
-    takeMyFunc(inputToOutput, hal(), 'hi hal')
+    test(inputToOutput, hal(), 'hi hal')
 
     // 2 - expect failure
-    takeMyFunc(inputToOutput, 'hi ash', 'hi dave', true)
+    test(inputToOutput, 'hi ash', 'hi dave', true)
 
     // 3 - expect failure - issue found HERE
-    takeMyFunc(returnTypeString, null, "string", true)
+    test(returnTypeString, null, "string", true)
 
     // 4
-    takeMyFunc(returnTypeString, null, "string")
+    test(returnTypeString, null, "string")
     
     // 5
-    takeMyFunc(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
+    test(innerFrameGenerator, ['red', 4, 5, 'vertical'], ['Vertical Red Rectangle', 18])
 
     // 6
-    takeMyFunc(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
+    test(innerFrameGenerator, ['greenish', 4, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 18])
 
     // 7 - expect failure
-    takeMyFunc(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 14])
+    test(innerFrameGenerator, ['greenish', 2, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 14])
 
     // 8 
-    takeMyFunc(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
+    test(innerFrameGenerator, ['greenish', 20, 5, 'diagonal'], ['Diagonal Greenish Rectangle', 50])
 
     // 9 - expect failure - unknown how object will log
-    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
+    test(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 44 units around.', undefined], true)
 
     // 10 - duplicate as above without expected fail
-    takeMyFunc(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
+    test(objectFrameGenerator, ['blue', 10, 12, 'rectangular'], ['Rectangular Blue shape that is 45 units around.', "[object Object]"])
 
 }
 
